@@ -1,25 +1,26 @@
-# Music
+# Bukisync
 
-This is a project to demonstrate the meteor integration with Polymer 1.0.
+Proyecto de prueba para probar la integración de meteor con Polymer 1.0.
 
-It's based on the [meteor-elements](https://github.com/atoy40/meteor-elements) project.
+Basado en el proyecto [meteor-elements](https://github.com/atoy40/meteor-elements).
 
-## Instructions
+## Instrucciones
 
 ```
-git clone https://github.com/atoy40/meteor-polymer-music.git
-cd meteor-polymer-music
+git clone https://github.com/carlosbkm/bukisync-starter.git
+cd bukisync-starter
 meteor run
 ```
-then open your browser at http://localhost:3000
+Abrir en el navegador http://localhost:3000
 
-You can also test it at http://music.a-toy.eu/
-
-Bower dependencies are installed automatically by mquandalle:bower and
-html import (with vulcanization if needed) by differential:vulcanize
+Las dependencias de Bower se instalan automáticamente mediante el paquete mquandalle:bower y los imports html (con vulcanization si es necesario) mediante differential:vulcanize
 
 ## Informations
 
-In this project, meteor templates are not used to create views. There is only one &lt;body&gt;
-([music.html](client/music.html)) to instance the application main polymer element (&lt;music-app&gt;)
-and one &lt;head&gt; to initialize polymer itself. Polymer elements are located into [public/components](public/components).
+En este proyecto se usa Polymer exclusivamente para la Vista, reemplazando las templates de Blaze que usa Meteor por defecto.
+
+Aún en fase inicial y como prueba de concepto, hay que resolver el enrutamiento (posiblemente mediante el uso de Page.js) y el uso de Polymer themes para aplicar estilos al tema.
+
+-- AVISO ---
+
+Esto es tan sólo un proyecto sandbox, inacabado y no usable para entornos de producción.

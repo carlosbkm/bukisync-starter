@@ -1,35 +1,39 @@
+<!-- Iron elements -->
+<link rel="import" href="/bower_components/iron-flex-layout/classes/iron-flex-layout.html">
 <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="/bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="/bower_components/iron-selector/iron-selector.html">
+
+
+<!-- Paper elements -->
+<link rel="import" href="/bower_components/paper-drawer-panel/paper-drawer-panel.html">
+<link rel="import" href="/bower_components/paper-header-panel/paper-header-panel.html">
+<link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="/bower_components/paper-item/paper-item.html">
+<link rel="import" href="/bower_components/paper-material/paper-material.html">
+<link rel="import" href="/bower_components/paper-menu/paper-menu.html">
+<link rel="import" href="/bower_components/paper-styles/paper-styles-classes.html">
+<link rel="import" href="/bower_components/paper-toast/paper-toast.html">
+<link rel="import" href="/bower_components/paper-toolbar/paper-toolbar.html">
 <link rel="import" href="/bower_components/paper-button/paper-button.html">
 <link rel="import" href="/bower_components/paper-dialog/paper-dialog.html">
 <link rel="import" href="/bower_components/paper-input/paper-input.html">
-<link rel="import" href="/bower_components/paper-toast/paper-toast.html">
-<link rel="import" href="/bower_components/paper-drawer-panel/paper-drawer-panel.html">
-<link rel="import" href="/bower_components/paper-toolbar/paper-toolbar.html">
-<link rel="import" href="/bower_components/paper-menu/paper-menu.html">
-<link rel="import" href="/bower_components/paper-header-panel/paper-header-panel.html">
-<link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="/bower_components/paper-material/paper-material.html">
+
+<!-- Meteor elements -->
 <link rel="import" href="/bower_components/meteor-elements/meteor-connection.html">
 <link rel="import" href="/bower_components/meteor-elements/meteor-collection.html">
 <link rel="import" href="/bower_components/meteor-elements/meteor-subscribe.html">
 <link rel="import" href="/bower_components/meteor-elements/meteor-query.html">
+
+<!-- Add your elements here -->
+
 <!-- Configure your routes here -->
 <link rel="import" href="routing.html">
-
-
+<!--<link rel="import" href="app-theme.html">-->
 
 <dom-module id="music-app">
 
 <style is="custom-style">
-
-  /*
-   Polymer includes a shim for CSS Custom Properties that we can use for application theming.
-   Below, you'll find the default palette for the Polymer Starter Kit layout. Feel free to play
-   with changing the colors used or generate your own palette of colours at MaterialPalette.com.
-
-   See https://www.polymer-project.org/1.0/docs/devguide/styling.html#xscope-styling-details
-   for further information on custom CSS properties.
-   */
 
   /* Application theme */
 
@@ -218,7 +222,6 @@
   @media all and (min-width: 1601px) and (max-width: 1920px) { }
 </style>
 
-
   <template>
    <meteor-connection status="{{status}}" on-server-disconnected="_onDisconnect"></meteor-connection>
     <meteor-subscribe name="albums" args="[]" isready="{{_subready}}"></meteor-subscribe>
@@ -271,7 +274,7 @@
           <paper-icon-button icon="search"></paper-icon-button>
 
           <!-- Application name -->
-          <div class="middle paper-font-display2 app-name"><h1>Bukisync</h1></div>
+          <div class="middle paper-font-display2 app-name">My Project</div>
 
           <!-- Application sub title -->
           <div class="bottom title"></div>
@@ -289,7 +292,7 @@
                 <p class="paper-font-subhead">Mensaje leído de Meteor:</p>
                 <ul>
                   <template is="dom-repeat" items="{{mensajitos}}">
-                      <li><span>{{item.hello}}</span> <span>{{item.message}}</span></li>
+                      <h3>{{item.hello}}</h3> <h3>{{item.data}}</h3>
                   </template>
                 </ul> 
                 <my-list></my-list>

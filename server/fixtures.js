@@ -4,7 +4,7 @@ var initDatabase = function() {
         
       Mensajes.insert({
         hello: "holita",
-        message: "holaza"      
+        data: "acabo de arrancar"      
       });
     }
 }

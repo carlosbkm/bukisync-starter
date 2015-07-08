@@ -20,7 +20,7 @@ Las dependencias de Bower se instalan automáticamente mediante el paquete mquan
 
 ## Información
 
-En este proyecto se usa Polymer exclusivamente para la vista, reemplazando las templates de Blaze que usa Meteor por defecto.
+> En este proyecto se usa Polymer exclusivamente para la vista, reemplazando las templates de Blaze que usa Meteor por defecto.
 
 El enrutamiento se hace mediante Page.js.
 

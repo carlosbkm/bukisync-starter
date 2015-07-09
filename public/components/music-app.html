@@ -277,7 +277,7 @@
           <div class="middle paper-font-display2 app-name">My Project</div>
 
           <!-- Application sub title -->
-          <div class="bottom title"></div>
+          <div class="bottom title">{{route}}</div>
 
         </paper-toolbar>
 
@@ -356,6 +356,13 @@
     _onError: function(e) {
       this.$.toast1.text = "A problem occurs "+e.detail.error;
       this.$.toast1.show();
+    },
+    // Close drawer after menu item is selected if drawerPanel is narrow
+    onMenuSelect: function() {
+      var drawerPanel = document.querySelector('#paperDrawerPanel');
+      if (drawerPanel.narrow) {
+        drawerPanel.closeDrawer();
+      }
     },    
     ready: function() {
            
